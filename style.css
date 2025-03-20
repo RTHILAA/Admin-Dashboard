@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Akaya+Kanadaka&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Work Sans", serif;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image {
+  width: 10vh;
+  height: 10vh;
+  flex-shrink: 0;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  transition: transform 0.4s ease-in-out;
+}
+
+.image img:hover {
+  transform: scale(1.1);
+}
+
+.Profile {
+  display: flex;
+  align-items: center;
+  gap: 2.5vh;
+  padding: 10px 0;
+  position: relative;
+  right: 1vh;
+}
+
+.Profile h2 {
+  font-size: 3.5vh;
+  text-align: center;
+}
+
+.menu {
+  background-color: #123;
+  width: 90px;
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.menu:hover {
+  width: 270px;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  height: 97vh;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 6vh;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  background-color: rgba(128, 128, 128, 0.95);
+  transform: translateX(10px);;
+}
+
+.menu i {
+  font-size: 4vh;
+}
+
+.Log-out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.Log-out a {
+  background-color: red;
+}
+
+.Log-out a:hover {
+  background-color: rgba(255, 0, 0, 0.813);
+}
+
+.content {
+  width: 100%;
+  margin: 10px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.title-info {
+  height: 10vh;
+  background-color: aqua;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.title-info:hover {
+  background-color: #00cccc;
+}
+
+.data-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.box {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #123;
+  height: 20vh;
+  flex-grow: 1;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.02);
+  background-color: rgba(128, 128, 128, 0.95);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+}
+
+span {
+  font-size: 30px;
+}
+
+.content i {
+  font-size: 5vh;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 2px solid white;
+  background-color: #123;
+  height: 7vh;
+  transition: background-color 0.3s ease-in-out;
+}
+
+th {
+  background-color: blue;
+}
+
+td:hover {
+  background-color: rgba(128, 128, 128, 0.95);
+}
+
+.table span {
+  border-radius: 6px;
+  padding: 0.5vh;
+}
+
+.price {
+  background-color: green;
+}
+
+.count {
+  background-color: gold;
+  color: black;
+}
+
+.table span {
+  font-size: 4vh;
+}
+
+@media (min-width: 950px) and (max-width: 1150px) {
+  .menu {
+    width: 90px;
+  }
+
+  .menu:hover {
+    width: 200px;
+  }
+
+  .Profile h2 {
+    font-size: 2.5vh;
+  }
+
+  .menu i {
+    font-size: 3vh;
+  }
+
+  .menu a {
+    gap: 4vh;
+  }
+
+  .content {
+    margin: 5px;
+  }
+
+  .title-info {
+    height: 8vh;
+    padding: 8px;
+  font-size: 2.5vh;
+  }
+
+  .box {
+    height: 15vh;
+  }
+
+  .content i {
+    font-size: 4vh;
+  }
+
+  span {
+    font-size: 25px;
+  }
+
+  .table span {
+    font-size: 3vh;
+  }
+}
+
+@media (max-width: 950px) {
+  .image {
+    display: none;
+  }
+  .menu {
+    width: 80px;
+  }
+
+  .menu:hover {
+    width: 265px;
+  }
+
+  .Profile h2 {
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  .menu i {
+    font-size: 3vh;
+  }
+
+  .menu a {
+    gap: 5.5vh;
+    font-size: 14px;
+  }
+
+  .content {
+    margin: 5px;
+  }
+
+  .title-info {
+    height: 7vh;
+    padding: 6px;
+    font-size: 2vh;
+  }
+
+  .box {
+    height: 12vh;
+  }
+
+  .content i {
+    font-size: 3.5vh;
+  }
+
+  span {
+    font-size: 20px;
+  }
+
+  .table span {
+    font-size: 2.5vh;
+  }
+
+  .data-info {
+    flex-wrap: wrap;
+  }
+
+  .box {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    width: 80px;
+  }
+
+  .menu:hover {
+    width: 200px;
+}
+
+  .Profile h2 {
+    font-size: 1.5vh;
+    padding: 0 5px;
+    text-align: center;
+  }
+
+  .menu i {
+    font-size: 2vh;
+  }
+
+  .menu a {
+    gap: 2vh;
+    font-size: 12px;
+  }
+  
+  .menu a:hover {
+  transform: none;
+}
+
+  .content {
+    margin: 3px;
+  }
+
+  .title-info {
+    height: 6vh;
+    padding: 5px;
+    font-size: 1.5vh;
+  }
+
+  .box {
+    height: 10vh;
+  }
+
+  .content i {
+    font-size: 3vh;
+  }
+
+  span {
+    font-size: 18px;
+  }
+
+  .table span {
+    font-size: 2vh;
+  }
+
+  .data-info {
+    flex-direction: column;
+  }
+
+  .box {
+    flex-basis: 100%;
+    margin-bottom: 5px;
+  }
+
+  .table {
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 2vh;
+  }
+}
